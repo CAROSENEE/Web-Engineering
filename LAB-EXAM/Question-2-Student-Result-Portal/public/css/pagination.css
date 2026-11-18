@@ -1,0 +1,8 @@
+.pagination{display:flex;justify-content:flex-end;padding-top:15px}
+.pagination nav{display:block}
+.pagination ul.pagination{display:flex;align-items:center;gap:4px;list-style:none;margin:0;padding:0}
+.pagination .page-item{margin:0}
+.pagination .page-link{display:grid;place-items:center;min-width:31px;height:31px;padding:0 9px;border:1px solid #e7ebf1;border-radius:6px;background:#fff;color:#53647b;text-decoration:none;font-size:11px}
+.pagination .page-link:hover{border-color:#a8d7d1;color:#087e82}
+.pagination .page-item.active .page-link{border-color:#087e82;background:#087e82;color:#fff}
+.pagination .page-item.disabled .page-link{color:#aeb7c3;background:#f7f8fa}
