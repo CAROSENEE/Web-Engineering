@@ -42,6 +42,6 @@
     <div class="table-wrap"><table><thead><tr><th>Student</th><th>Roll number</th><th>Department</th><th>Results</th><th>Actions</th></tr></thead><tbody>
     @forelse($students as $student)<tr><td><div class="student-cell"><span class="avatar avatar-{{ $loop->index % 5 }}">{{ \Illuminate\Support\Str::upper(\Illuminate\Support\Str::substr($student->name, 0, 1)) }}</span><a class="strong" href="{{ route('students.show', $student) }}">{{ $student->name }}</a></div></td><td>{{ $student->roll }}</td><td>{{ $student->department }}</td><td><span class="course-count">{{ $student->results_count }} courses</span></td><td class="actions"><a href="{{ route('students.edit', $student) }}">Edit</a><form method="POST" action="{{ route('students.destroy', $student) }}" onsubmit="return confirm('Delete this student and their results?')">@csrf @method('DELETE')<button class="text-danger">Delete</button></form></td></tr>
     @empty<tr><td class="empty" colspan="5">No student records found.</td></tr>@endforelse
-    </tbody></table></div><div class="pagination">{{ $students->links() }}</div>
+    </tbody></table></div><div class="pagination">{{ $students->links('pagination::bootstrap-4') }}</div>
 </section>
 @endsection

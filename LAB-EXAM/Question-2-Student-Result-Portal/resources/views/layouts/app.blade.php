@@ -4,6 +4,7 @@
     <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title', 'Student Result Portal')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/pagination.css') }}">
 </head>
 <body>
 <header class="topbar"><a class="brand" href="{{ route('students.index') }}"><span class="brand-mark">R</span><span class="brand-copy">Campus<span>Results</span><small>STUDENT INFORMATION SYSTEM</small></span></a><nav aria-label="Main navigation">
