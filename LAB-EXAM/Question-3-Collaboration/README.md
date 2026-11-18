@@ -3,22 +3,23 @@
 ## Repository record
 
 - Shared repository: https://github.com/CAROSENEE/Web-Engineering
-- Pushed working branch: `lab-exam-solutions`
-- Commit on that branch: `feat(lab): add student registration and result portal`
+- Front-end branch: `feature/frontend-registration` — commit `1421dd0`
+- Back-end branch: `feature/backend-result-portal` — commit `1ea26a4`
+- Combined lab branch: `lab-exam-solutions` — latest commit `8764abf`
 
 ## Remaining team evidence
 
-The assignment asks for separate front-end and back-end branches, peer review, and at least one merged pull request. Those actions need to be completed by the real team in GitHub; no PR or peer review is claimed here.
+Separate front-end and back-end branches have been pushed. The team still needs to open the pull requests, have a teammate review, and merge at least one PR. No PR or peer review is claimed here.
 
 1. Add your teammate(s) as collaborators to the repository.
-2. Create `feature/frontend-registration` for Question 1 and `feature/backend-result-portal` for Question 2, then push the relevant work to each branch.
-3. Open pull requests against `main`, ask a teammate to review, and merge after approval.
+2. Open the prepared [front-end pull request](https://github.com/CAROSENEE/Web-Engineering/pull/new/feature/frontend-registration) and [back-end pull request](https://github.com/CAROSENEE/Web-Engineering/pull/new/feature/backend-result-portal) against `main`.
+3. Ask a teammate to review and merge at least one PR after approval.
 4. Replace the fields below with the actual GitHub evidence.
 
 ## Submission fields
 
-- Front-end branch and PR: **Add actual branch name and PR URL**
-- Back-end branch and PR: **Add actual branch name and PR URL**
+- Front-end branch: `feature/frontend-registration`; PR URL: **Add after opening**
+- Back-end branch: `feature/backend-result-portal`; PR URL: **Add after opening**
 - Merged PR and reviewer: **Add merged PR URL and reviewer name**
 - My contribution: **Describe the work you personally completed and the files/features you handled**
 
