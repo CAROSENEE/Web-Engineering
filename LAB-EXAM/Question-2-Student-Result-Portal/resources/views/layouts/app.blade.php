@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-<header class="topbar"><a class="brand" href="{{ route('students.index') }}">Result<span>Portal</span></a><nav aria-label="Main navigation">
-    @auth <a href="{{ route('students.index') }}">Students</a><span class="user">{{ auth()->user()->name }}</span><form method="POST" action="{{ route('logout') }}">@csrf<button class="link-button">Sign out</button></form>
+<header class="topbar"><a class="brand" href="{{ route('students.index') }}"><span class="brand-mark">R</span><span class="brand-copy">Campus<span>Results</span><small>STUDENT INFORMATION SYSTEM</small></span></a><nav aria-label="Main navigation">
+    @auth <a class="nav-active" href="{{ route('students.index') }}">Dashboard</a><a href="{{ route('students.index') }}#student-directory">Students</a><a href="{{ route('students.index') }}#recent-results">Results</a><span class="nav-divider"></span><span class="user-avatar">{{ \Illuminate\Support\Str::upper(\Illuminate\Support\Str::substr(auth()->user()->name, 0, 1)) }}</span><span class="user">{{ auth()->user()->name }}</span><form method="POST" action="{{ route('logout') }}">@csrf<button class="link-button">Sign out</button></form>
     @else <a href="{{ route('login') }}">Sign in</a> @endauth
 </nav></header>
 <main class="container">

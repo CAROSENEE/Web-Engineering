@@ -1,19 +1,25 @@
 # Question 3 — Team collaboration evidence
 
-## Suggested repository workflow
+## Repository record
 
-1. Create a shared GitHub repository and add every team member as a collaborator.
-2. Create two working branches from `main`: `feature/frontend-registration` and `feature/backend-result-portal`.
-3. Keep each contributor's work on their assigned branch. Use focused commits such as `feat(frontend): add responsive student registration form` and `feat(backend): add student results CRUD`.
-4. Push both branches and open pull requests against `main`. Review each PR, request fixes if needed, then merge it.
-5. Record the real PR URL, contributors, review and merge date below. Do not claim a merge until GitHub shows it as merged.
+- Shared repository: https://github.com/CAROSENEE/Web-Engineering
+- Pushed working branch: `lab-exam-solutions`
+- Commit on that branch: `feat(lab): add student registration and result portal`
 
-## Evidence to complete with the team
+## Remaining team evidence
 
-- Shared repository URL: **Add the actual URL**
-- Front-end branch / PR: **Add branch name and merged PR URL**
-- Back-end branch / PR: **Add branch name and merged PR URL**
-- Team members and review: **Add names and who reviewed which PR**
-- My contribution: **Replace with the work you personally completed**
+The assignment asks for separate front-end and back-end branches, peer review, and at least one merged pull request. Those actions need to be completed by the real team in GitHub; no PR or peer review is claimed here.
 
-This folder is a submission template and records the workflow. No GitHub account or remote repository was connected in this workspace, so it does not invent commits, collaborators or a merged pull request.
+1. Add your teammate(s) as collaborators to the repository.
+2. Create `feature/frontend-registration` for Question 1 and `feature/backend-result-portal` for Question 2, then push the relevant work to each branch.
+3. Open pull requests against `main`, ask a teammate to review, and merge after approval.
+4. Replace the fields below with the actual GitHub evidence.
+
+## Submission fields
+
+- Front-end branch and PR: **Add actual branch name and PR URL**
+- Back-end branch and PR: **Add actual branch name and PR URL**
+- Merged PR and reviewer: **Add merged PR URL and reviewer name**
+- My contribution: **Describe the work you personally completed and the files/features you handled**
+
+Possible contribution topics, if they accurately describe your work: responsive registration form and JavaScript validation; Laravel student CRUD, results, grade calculation, database seed data, and dashboard.

@@ -3,14 +3,28 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+use App\Models\Result;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
     public function index()
     {
-        $students = Student::withCount('results')->latest()->paginate(10);
-        return view('students.index', compact('students'));
+        $students = Student::withCount('results')->orderBy('name')->paginate(8);
+        $resultCount = Result::count();
+        $dashboard = [
+            'students' => Student::count(),
+            'courses' => Result::distinct('course_code')->count('course_code'),
+            'average' => round((float) Result::avg('marks'), 1),
+            'passRate' => $resultCount ? round(Result::where('marks', '>=', 40)->count() * 100 / $resultCount) : 0,
+        ];
+        $gradeDistribution = Result::query()
+            ->selectRaw('grade, COUNT(*) as total')
+            ->groupBy('grade')
+            ->pluck('total', 'grade');
+        $latestResults = Result::with('student')->latest()->take(6)->get();
+
+        return view('students.index', compact('students', 'dashboard', 'gradeDistribution', 'latestResults'));
     }
 
     public function create() { return view('students.create'); }

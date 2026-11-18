@@ -5,18 +5,22 @@ Laravel 9 application with authenticated student CRUD, Eloquent one-to-many stud
 ## Requirements
 
 - PHP 8.0 or later with `pdo_sqlite`, Composer 2, and a web browser.
-- Dependencies are included in `vendor/` and `composer.lock`.
+- Dependencies are locked in `composer.lock` and installed locally with Composer.
 
 ## Run locally (PowerShell)
 
 ```powershell
 cd "D:\CAROSINE\Web-Engineering\LAB-EXAM\Question-2-Student-Result-Portal"
-php artisan migrate
+if (-not (Test-Path .env)) { Copy-Item .env.example .env }
+composer install
+php artisan key:generate
+if (-not (Test-Path database/database.sqlite)) { New-Item -ItemType File database/database.sqlite | Out-Null }
+php artisan migrate --seed
 php artisan portal:user
 php artisan serve
 ```
 
-Open `http://127.0.0.1:8000`, sign in with the email and password created by `portal:user`, and manage students and results. The project is configured for SQLite; the database file is `database/database.sqlite`. Do not commit `.env` or real credentials.
+Open `http://127.0.0.1:8000`, sign in with the email and password created by `portal:user`, and manage students and results. The project is configured for SQLite; Laravel resolves its default SQLite database path to the absolute `database/database.sqlite` location. Do not commit `.env` or real credentials.
 
 ## Grade scale
 
