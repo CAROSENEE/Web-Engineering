@@ -5,7 +5,7 @@
 - Shared repository: https://github.com/CAROSENEE/Web-Engineering
 - Front-end branch: `feature/frontend-registration` — commit `1421dd0`
 - Back-end branch: `feature/backend-result-portal` — commit `1ea26a4`
-- Combined lab branch: `lab-exam-solutions` — latest commit `8764abf`
+- Combined lab branch: `lab-exam-solutions`
 
 ## Remaining team evidence
 
